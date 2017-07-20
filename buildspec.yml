@@ -15,6 +15,6 @@ phases:
       - mv build/libs/*.jar build/libs/application.jar
 artifacts:
   files:
-      - 'build/libs/*.jar'
-  base-directory: complete
+      - '*.jar'
+  base-directory: complete/build/libs
       
