@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      # Install nodejs https://nodejs.org/en/download/package-manager/
+      - cd complete
+      - chmod +x gradlew
+  build:
+    commands:
+      - ./gradlew bootRepackage
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+      - target/*.jar
